@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Laberinto</string>
+    <string name="title_activity_main">Maze game</string>
+    <string name="up">UP</string>
+    <string name="down">DOWN</string>
+    <string name="pause">PAUSE</string>
+    <string name="right">RIGHT</string>
+    <string name="left">LEFT</string>
+    <string name="please_select_game">Please select game!</string>
+    <string name="or_create_a_new_game">OR create a new game</string>
+    <string name="name">Name</string>
+</resources>

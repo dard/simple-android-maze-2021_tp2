@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "951148147105",
+    "project_id": "simple-android-maze-reloaded",
+    "storage_bucket": "simple-android-maze-reloaded.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951148147105:android:ba43a2f9bd45f80580dbe0",
+        "android_client_info": {
+          "package_name": "ar.edu.ips.aus.seminario2.sampleproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "951148147105-a9ocatugfjd6fvo03846oup2cq3kt0t9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWYixUXjTwku7wUz3M7iOiTOk2FkUzyWw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "951148147105-a9ocatugfjd6fvo03846oup2cq3kt0t9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
