@@ -83,6 +83,10 @@ public class Game {
     ValueEventListener playerDataListener = new ValueEventListener() {
         @Override
         public void onDataChange(@NonNull DataSnapshot snapshot) {
+            if ((int)getPlayer().getX() == getMazeBoard().getExitX() && (int)getPlayer().getY() == getMazeBoard().getExitY()) {
+                Game.getInstance().arrivalGame();
+                //Log.i(TAG, "Arrival");
+            };
             if (snapshot.exists()) {
                 GenericTypeIndicator<HashMap<String, Player>> tweakingTypeIndicator =
                         new GenericTypeIndicator<HashMap<String, Player>>() {
@@ -153,13 +157,18 @@ public class Game {
                 gameMetadata.setStatus(PAUSED.name());
                 updateGameStatus();
                 break;
-            case FINISHED:
+            /*case FINISHED:
                 gameMetadata.setStatus(FINISHED.name());
                 updateGameStatus();
-                break;
+                break;*/
             default:
                 break;
         }
+    }
+
+    public void arrivalGame() {
+        gameMetadata.setStatus(FINISHED.name());
+        updateGameStatus();
     }
 
     private void updateGameStatus() {
