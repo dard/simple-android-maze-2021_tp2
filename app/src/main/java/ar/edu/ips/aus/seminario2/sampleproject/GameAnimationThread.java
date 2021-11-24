@@ -42,6 +42,7 @@ public class GameAnimationThread extends Thread {
                 try {
                     GameMetadata.GameStatus status = snapshot.getValue(GameMetadata.GameStatus.class);
                     Game.getInstance().setStatus(status.toString());
+
                 } catch (Exception e) {
                     // intentionally left blank
                 }

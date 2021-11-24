@@ -77,7 +77,7 @@ public class MazeBoardActivity extends AppCompatActivity
 
                 ImageView imageView = new ImageView(this);
                 imageView.setBackgroundResource(resId);
-                if ( i == board.getExitX() && j == board.getExitY()) {
+                if ( j == board.getExitX() && i == board.getExitY()) {
                     imageView.setImageResource(R.drawable.arrival);
                 }
 
