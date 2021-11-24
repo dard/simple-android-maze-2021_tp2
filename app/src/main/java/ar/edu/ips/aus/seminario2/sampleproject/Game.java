@@ -83,10 +83,7 @@ public class Game {
     ValueEventListener playerDataListener = new ValueEventListener() {
         @Override
         public void onDataChange(@NonNull DataSnapshot snapshot) {
-            if ((int)getPlayer().getX() == getMazeBoard().getExitX() && (int)getPlayer().getY() == getMazeBoard().getExitY()) {
-                Game.getInstance().arrivalGame();
-                //Log.i(TAG, "Arrival");
-            };
+
             if (snapshot.exists()) {
                 GenericTypeIndicator<HashMap<String, Player>> tweakingTypeIndicator =
                         new GenericTypeIndicator<HashMap<String, Player>>() {
@@ -96,7 +93,7 @@ public class Game {
                     if (player.getID() != getInstance().ID) {
                         getInstance().players.put(player.getID(), player);
                     }
-                    //Log.d(TAG, player.toString());
+                    Log.d(TAG, player.toString());
                 }
             }
         }
@@ -120,10 +117,17 @@ public class Game {
     }
 
     public void update() {
+
         // update only local player
         MazeBoard board = Game.getInstance().getMazeBoard();
         this.getPlayer().move(board);
         sendPlayerData();
+
+        if ((int)this.getPlayer().getX() == (Game.getInstance().getMazeBoard().getExitX()) && (int)this.getPlayer().getY() == (Game.getInstance().getMazeBoard().getExitY())) {
+            setStatus("FINISHED");
+            Game.getInstance().arrivalGame();
+            Log.i(TAG, "Arrival");
+        };
    }
 
     private void sendPlayerData() {
